@@ -9,3 +9,15 @@ links.querySelectorAll('a').forEach(link => link.addEventListener('click', () =>
   toggle.setAttribute('aria-expanded', 'false');
 }));
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const aiToggle = document.getElementById('ai-toggle');
+const root = document.documentElement;
+
+function setAi(enabled) {
+  root.dataset.ai = enabled ? 'on' : 'off';
+  aiToggle.setAttribute('aria-pressed', String(enabled));
+  localStorage.setItem('ai-enabled', String(enabled));
+}
+
+setAi(localStorage.getItem('ai-enabled') !== 'off');
+aiToggle.addEventListener('click', () => setAi(root.dataset.ai !== 'on'));

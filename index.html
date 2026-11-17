@@ -12,6 +12,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="ai-bar">
+    <button class="ai-toggle" id="ai-toggle" type="button" aria-pressed="true">
+      <span>don't like AI? Click here</span>
+      <span class="ai-switch" aria-hidden="true"><span class="ai-switch-knob"></span></span>
+    </button>
+  </div>
+
   <header class="site-header">
     <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="#top"><span class="brand-mark">CK</span><span>Collin Kinney</span></a>
@@ -23,7 +30,7 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main id="top" class="ai-page">
     <section class="hero wrap">
       <div class="hero-copy">
         <div class="eyebrow"><span class="eyebrow-line"></span> SOFTWARE DEVELOPER · FULL-STACK & PRODUCT-MINDED</div>
@@ -154,6 +161,7 @@
       </div>
     </section>
   </main>
+  <main class="manual-page" id="manual-content"></main>
   <footer class="footer"><div class="wrap footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark">CK</span><span>Collin Kinney</span></a><span>Designed to be clear. Built to be useful.</span><span>© <span id="year"></span> Collin Kinney</span></div></footer>
   <script src="script.js"></script>
 </body>

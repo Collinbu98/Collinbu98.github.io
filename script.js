@@ -10,6 +10,7 @@ links.querySelectorAll('a').forEach(link => link.addEventListener('click', () =>
 }));
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/*
 const aiToggle = document.getElementById('ai-toggle');
 const root = document.documentElement;
 
@@ -21,3 +22,4 @@ function setAi(enabled) {
 
 setAi(localStorage.getItem('ai-enabled') !== 'off');
 aiToggle.addEventListener('click', () => setAi(root.dataset.ai !== 'on'));
+*/
